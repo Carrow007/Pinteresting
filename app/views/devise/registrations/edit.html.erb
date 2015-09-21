@@ -11,8 +11,14 @@
     </div>
     
       <div class="form-group">
+       <%= f.label :name %>
+       <%= f.text_field :name, class: "form-control", :autofocus => true %>
+      </div>
+
+
+      <div class="form-group">
        <%= f.label :email %>
-       <%= f.email_field :email, class: "form-control" :autofocus => true %></div>
+       <%= f.email_field :email, class: "form-control", :autofocus => true %></div>
     </div>
 
      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -21,7 +27,7 @@
    
      <div class="form-group">
         <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-        <%= f.password_field :password, class: "form-control" :autocomplete => "off" %>
+        <%= f.password_field :password, class: "form-control", :autocomplete => "off" %>
      </div>
   
   
